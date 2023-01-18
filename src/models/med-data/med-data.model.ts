@@ -3,14 +3,14 @@ export enum BM_TYPE {
     P = 'protein'
 }
 
-export interface Structure {
+export type Structure =  {
     name?: string;
     id?: string;
     rdfs_label?: string;
     b_type?: BM_TYPE;
 }
 
-export interface Row {
+export type Row = {
     anatomical_structures: Array<Structure>;
     cell_types: Array<Structure>;
     biomarkers: Array<Structure>;
