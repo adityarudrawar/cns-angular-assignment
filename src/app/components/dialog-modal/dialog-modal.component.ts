@@ -1,6 +1,6 @@
 import { Component,Inject, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import { DataFetchService } from 'src/services/data-fetch.service';
+import { DataFetchService } from 'src/app/services/data-fetch.service';
 
 type ItemDetails = {
   name?: string;
@@ -32,7 +32,7 @@ export class DialogModalComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getItemDetails('UBERON_0002302');
+    this.getItemDetails(this.id);
   }
 
   getItemDetails(id:string){

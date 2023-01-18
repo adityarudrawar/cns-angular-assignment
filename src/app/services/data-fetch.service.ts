@@ -14,7 +14,8 @@ export class DataFetchService {
   }
 
   getDatabyId(id: string){
-    // TODO: remove : from id to -
+    // Replace : to _
+    id = id.replace(":","_");
     return this._http.get(STRUCTURE_DATA_ENDPOINT + id)
   }
 }
