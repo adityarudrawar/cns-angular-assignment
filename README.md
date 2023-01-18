@@ -8,10 +8,11 @@ This project is developed using multiple technical concepts like: Dependency Inj
 This project displays the bio-medical data recieved from apis.
 
 ### List of structures
-[image.png]
+![image](https://user-images.githubusercontent.com/30310911/213284467-ece082f8-49b6-4c73-beb9-43f418dacebb.png)
+
 
 ### Structure Information
-[image.png]
+![image](https://user-images.githubusercontent.com/30310911/213284519-14822d5c-3f0b-4e35-bad5-22637835dd63.png)
 
 ## Run project
 To install the dependencies: npm install
