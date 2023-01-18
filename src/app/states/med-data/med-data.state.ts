@@ -5,16 +5,25 @@ import { DataFetchService } from "src/app/services/data-fetch.service";
 import { GetMedData } from "./med-data.actions";
 import { MedDataStateModel, Structure, Row } from "./med-data.model";
 
+/**
+ * State Definition
+ */
 @State<MedDataStateModel>({
     name: "medDataState",
     defaults: {
         anatomicalData: [],
     }
 })
+
+/** State Initialisation using Injectable */
 @Injectable()
 export class MedDataState {
     constructor(private _dataFetchService: DataFetchService){}
 
+    /**
+     * Action for state change
+     * @param ctx Injected State COntxt of medstate model
+     */
     @Action(GetMedData)
     getMedData(ctx: StateContext<MedDataStateModel>){
         const state = ctx.getState();

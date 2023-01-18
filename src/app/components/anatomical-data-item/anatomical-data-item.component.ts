@@ -9,13 +9,22 @@ import { DialogModalComponent } from '../dialog-modal/dialog-modal.component';
 })
 export class AnatomicalDataItemComponent {
 
+  /** id of the anatomical data strucutre */
   @Input() id: string= "1";
 
+  /** name of the anatomical data structure */
   @Input() name: string = "Aditya";
 
-  
+  /**
+   * 
+   * @param dialog MatDialog object to initialise the MatModule Dialog
+   * Uses Dependency Injection
+   */
   constructor(public dialog: MatDialog) {}
   
+  /**
+   * Open the dialog-modal, which shows the details of the anatomical-structure
+   */
   openDialog(): void {
       const dialogRef = this.dialog.open(DialogModalComponent, {
         data: { id: this.id },

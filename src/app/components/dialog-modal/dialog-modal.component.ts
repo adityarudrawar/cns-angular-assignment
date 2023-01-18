@@ -2,13 +2,6 @@ import { Component,Inject, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { DataFetchService } from 'src/app/services/data-fetch.service';
 
-type ItemDetails = {
-  name?: string;
-  description?: string;
-  ontologyLink?: string;
-  iri?: string;
-}
-
 @Component({
   selector: 'app-dialog-modal',
   templateUrl: './dialog-modal.component.html',
@@ -16,12 +9,23 @@ type ItemDetails = {
 })
 export class DialogModalComponent implements OnInit{
 
+  /** id of the structure */
   id : string;
+  /** iri of the structure */
   iri: string;
+  /** description of the structure */
   description: string;
+  /** ontology-link for the strucutre */
   ontologyLink: string;
+  /** label for the structure */
   name: string;
   
+  /**
+   * get id of the structure, and fetch the data for the structuren and fill dialog-box with the details
+   * @param dialogRef MatDialog object reference
+   * @param data Data passed while initilization( id of the structure)
+   * @param _dataFetchService API service
+   */
   constructor(
     public dialogRef: MatDialogRef<DialogModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {id: string},
@@ -35,6 +39,11 @@ export class DialogModalComponent implements OnInit{
     this.getItemDetails(this.id);
   }
 
+  /**
+   * get details of the structure with id
+   * interfaces with the api service
+   * @param id structure id
+   */
   getItemDetails(id:string){
     this._dataFetchService.getDatabyId(id).subscribe(response => {
       const data = JSON.parse(JSON.stringify(response))._embedded.terms[0];
@@ -45,6 +54,9 @@ export class DialogModalComponent implements OnInit{
     })
   }
   
+  /**
+   * To maintain opening/closing of dialog-box
+   */
   onNoClick(): void {
     this.dialogRef.close();
   }

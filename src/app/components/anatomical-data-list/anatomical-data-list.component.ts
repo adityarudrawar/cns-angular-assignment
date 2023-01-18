@@ -11,14 +11,28 @@ import { Observable } from 'rxjs';
 })
 export class AnatomicalDataListComponent implements OnInit{
 
+  /**
+   * Anatomical data
+   */
   data: Structure[] = [] ;
   
+  /**
+   * state select
+   */
   @Select((state: { medDataState: { anatomicalData: Structure[]; }; })  => state.medDataState.anatomicalData) dataList$: Observable<Structure[]>;
   
+  /**
+   * Initialises state change
+   * @param store ngxs store object
+   */
   constructor(private store:Store){
     this.store.dispatch(new GetMedData());
   }
 
+  /**
+   * get data from state when state changes
+   * initialise data with changing state
+   */
   ngOnInit(): void {
     this.dataList$.subscribe(x => {
       this.data = x; 
