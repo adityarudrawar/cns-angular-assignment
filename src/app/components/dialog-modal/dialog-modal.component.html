@@ -1,14 +1,20 @@
+<div class="dialog">
+  <div class="column">
+    <div>
+      <h1 mat-dialog-title class="left">{{name}}
+        <button class="shift-right button" mat-button (click)="onNoClick()">&times;</button>
+      </h1>
+    </div>
+    <hr>
+    <h3>Description</h3>
+    <div mat-dialog-content><p>{{description}}</p></div>
 
+    <h3>Ontology Link</h3>
+    <div mat-dialog-content><p>{{ontologyLink}}</p></div>
 
-<h1 mat-dialog-title>{{name}}</h1>
+    <h3>iri</h3>
+    <div mat-dialog-content><p>{{iri}}</p></div>
 
-<div mat-dialog-content><p>{{description}}</p></div>
-
-<div mat-dialog-content><p>{{ontologyLink}}</p></div>
-
-<div mat-dialog-content><p>{{iri}}</p></div>
-
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <!-- <button mat-button>No Thanks</button> -->
+    <div mat-dialog-actions></div>
+  </div>
 </div>

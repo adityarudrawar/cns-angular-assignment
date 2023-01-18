@@ -1,4 +1,4 @@
-<mat-card>
-  <mat-card-content (click)="openDialog()">{{name}}</mat-card-content>
-  <mat-card-content>{{id}}</mat-card-content>
+<mat-card (click)="openDialog()" class="mat-card">
+  <mat-card-content>Name: {{name}}</mat-card-content>
+  <mat-card-content>ID: {{id}}</mat-card-content>
 </mat-card>

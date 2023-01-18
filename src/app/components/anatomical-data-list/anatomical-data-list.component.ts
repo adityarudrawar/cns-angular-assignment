@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MedDataStateModel, Structure } from 'src/models/med-data/med-data.model';
+import { Structure } from 'src/app/states/med-data/med-data.model';
 import { Select, Store } from '@ngxs/store';
-import { GetMedData } from 'src/models/med-data/med-data.actions';
+import { GetMedData } from 'src/app/states/med-data/med-data.actions';
 import { Observable } from 'rxjs';
-import { MedDataState } from 'src/models/med-data/med-data.state';
-import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-anatomical-data-list',
@@ -23,8 +21,7 @@ export class AnatomicalDataListComponent implements OnInit{
 
   ngOnInit(): void {
     this.dataList$.subscribe(x => {
-      this.data = x;  
-      console.log('this.data=====', this.data)   
+      this.data = x; 
     });
   }
 }

@@ -9,17 +9,13 @@ import { DialogModalComponent } from '../dialog-modal/dialog-modal.component';
 })
 export class AnatomicalDataItemComponent {
 
-  // TODO: Remove undefined
   @Input() id: string= "1";
 
   @Input() name: string = "Aditya";
 
   
-  constructor(public dialog: MatDialog) {
-    console.log("herere");
-    console.log(dialog);
-  }
-
+  constructor(public dialog: MatDialog) {}
+  
   openDialog(): void {
       const dialogRef = this.dialog.open(DialogModalComponent, {
         data: { id: this.id },

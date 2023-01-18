@@ -1,0 +1,30 @@
+:host {
+    .dialog {
+        margin: 10px;
+        width: fit-content;
+    }
+    
+    .shift-right {
+        position: absolute;
+        right: 10px;
+        margin-left: auto;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .column {
+        flex-direction: column;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .button {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}

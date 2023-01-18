@@ -1,12 +1,18 @@
-.container {
-  display: flex;
-}
+:host {
 
-.column {
-  width: 50%;
-}
+  .column {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.container {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  .item {
+    width: 40%;
+    margin: 20px;
+  } 
+
+  .row {
+    font-size: larger;
+    font-weight: bold;
+  }
 }
