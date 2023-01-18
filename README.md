@@ -2,9 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+## Description
+This project is developed using multiple technical concepts like: Dependency Injection, Angular Directives, Observables, State Management using ngxs, MVC design pattern, Components, HTTPClient, Angular material components .
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project displays the bio-medical data recieved from apis.
+
+### List of structures
+[image.png]
+
+### Structure Information
+[image.png]
+
+## Run project
+To install the dependencies: npm install
+To run the project: npm run start / ng serve
+
 
 ## Code scaffolding
 
