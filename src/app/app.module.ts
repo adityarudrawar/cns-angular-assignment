@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store'
-import { MedDataState } from 'src/models/med-data/med-data.state';
+import { MedDataState } from 'src/app/states/med-data/med-data.state';
 import { HttpClientModule } from '@angular/common/http';
 import { AnatomicalDataListComponent } from './components/anatomical-data-list/anatomical-data-list.component';
 import { AnatomicalDataItemComponent } from './components/anatomical-data-item/anatomical-data-item.component';

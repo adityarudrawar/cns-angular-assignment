@@ -1,10 +1,9 @@
 import { Injectable } from "@angular/core";
 import { StateContext, Action } from "@ngxs/store";
 import { State } from "@ngxs/store";
-import { DataFetchService } from "src/services/data-fetch.service";
+import { DataFetchService } from "src/app/services/data-fetch.service";
 import { GetMedData } from "./med-data.actions";
 import { MedDataStateModel, Structure, Row } from "./med-data.model";
-import { Observable } from 'rxjs';
 
 @State<MedDataStateModel>({
     name: "medDataState",

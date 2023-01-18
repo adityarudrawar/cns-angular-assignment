@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MED_DATA_ENDPOINT, STRUCTURE_DATA_ENDPOINT } from '../constants';
+import { MED_DATA_ENDPOINT, STRUCTURE_DATA_ENDPOINT } from '../../constants';
 
 @Injectable({
   providedIn: 'root'
