@@ -21,7 +21,6 @@ export class MedDataState {
         const tempData: Array<Structure> = [];
 
         this._dataFetchService.getData().subscribe(response => {
-            console.log('yessss')
             const data: Row[] = JSON.parse(JSON.stringify(response)).data;
            
             // Filter the components
@@ -34,15 +33,11 @@ export class MedDataState {
                     };
                 }); 
             });
-            console.log("setest",typeof(tempData), tempData);
+
             ctx.setState({
                 ...state,
                 anatomicalData: tempData
             })
         });
-
-        console.log('noooo')
-
-
     }
 }
