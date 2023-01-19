@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## Deployment
+Github Page: https://adityarudrawar.github.io/cns-angular-assignment/
+
 ## Description
 This project is developed using multiple technical concepts like: Dependency Injection, Angular Directives, Observables, State Management using ngxs, MVC design pattern, Components, HTTPClient, Angular material components .
 
