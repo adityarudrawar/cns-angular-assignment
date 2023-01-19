@@ -1,8 +1,0 @@
-<div class="container">
-  <div class="row">Anatomical Structures Data</div>
-  <div class="column">
-    <p *ngFor="let item of data" class="item">
-      <app-anatomical-data-item *ngIf="item.name && item.id" [name]="item.name" [id]="item.id"></app-anatomical-data-item>
-    </p>
-  </div>
-</div>
